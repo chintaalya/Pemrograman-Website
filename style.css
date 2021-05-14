@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('bg.jpg');
+    overflow: hidden;
+}
+
+.container {
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 170px auto;
+}
+
+.wrapper {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.wrapper .title {
+    line-height: 90px;
+    background: #dbc60a;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.wrapper a button {
+    margin: 50px 20px;
+    height: 45px;
+    width: 90%;
+    outline: none;
+    color: #FFFFFF;
+    background: #dbc60a;
+    font-size: 20px;
+    font-weight: 500px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.wrapper form {
+    padding: 30px 25px 25px 25px;
+}
+
+.wrapper form .row {
+    height: 45px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.wrapper form .row input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 60px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.wrapper form .row input:focus {
+    border-color: #dbc60a;
+    box-shadow: inset 0px 0px 2px 2px rgba(26, 188, 156, 0.25);
+}
+
+.wrapper form .row label i {
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    color: #FFFFFF;
+    font-size: 18px;
+    background: #dbc60a;
+    border: 1px solid #dbc60a;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper form .button input {
+    margin-top: 15px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500px;
+    padding-left: 0px;
+    background: #dbc60a;
+    border: 1px solid lightgrey;
+    cursor: pointer;
+}
+
+.wrapper a button:hover,
+form .button input:hover {
+    background: #ffe600;
+}
+
+.wrapper form .signup {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.wrapper form .signup a {
+    color: #995200;
+    text-decoration: none;
+}
+
+form .signup a:hover {
+    text-decoration: underline;
+}
