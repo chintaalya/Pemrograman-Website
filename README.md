@@ -12,4 +12,8 @@ Database yang digunakan pada quiz ini adalah database dengan nama quiz.sql
 
 Dibuat oleh:
 
-Chinta 'Aliyyah Candramaya (192410101108)
+Chinta 'Aliyyah Candramaya 
+
+192410101108
+
+Pemrograman Berbasis Website - SI A
