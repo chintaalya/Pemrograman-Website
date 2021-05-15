@@ -25,7 +25,15 @@ if(isset($_COOKIE["id"]) && isset($_COOKIE["key"])) {
 // menghalangi user untuk kembali ke halaman login sebelum logout
 if(isset($_SESSION["login"])) {
     header("location:dashboard.php");
-}?>
+}
+
+if(isset($_GET['message'])){
+    $message = $_GET['message'];
+    if($message == "success"){
+        echo "<script>alert('Data User Berhasil Ditambahkan')</script>";
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -23,7 +23,7 @@ if(isset($_SESSION["login"])){
     require 'connection.php';
     if(isset($_POST["register"])){
         if(register($_POST) > 0){
-            echo "<script>alert('Data User Berhasil Ditambahkan')</script>";
+            header("location:index.php?message=success");
         } else {
             echo mysqli_error($conn);
         }
@@ -34,6 +34,22 @@ if(isset($_SESSION["login"])){
         <div class="wrapper">
             <div class="title">Registration Form</div>
             <form method="POST" action="#">
+            <?php 
+            if(isset($_GET['error'])){
+                $error = $_GET['error'];
+                if($error == "password"){
+
+                    // menampilkan pesan error bila password salah ?>
+                    <p style="color: #995200; font-style: italic; padding-bottom: 25px;">Konfirmasi Password tidak sesuai!</p>
+            <?php
+                } else if($error == "username"){
+                    
+                    // menampilkan pesan error bila username salah ?>
+                    <p style="color: #995200; font-style: italic; padding-bottom: 25px;">Username sudah terdaftar!</p>
+            <?php
+                }
+            }
+            ?>
                 <div class="row">
                     <label for="username"><i class="fas fa-user"></i></label>
                     <input type="text" name="username" id="username" placeholder="Username" required>

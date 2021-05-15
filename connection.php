@@ -18,13 +18,13 @@ function register($data){
     $query = "SELECT username FROM user WHERE username = '$username'";
     $result = mysqli_query($conn, $query);
     if(mysqli_fetch_array($result)) {
-        echo "<script>alert('Username Sudah Terdaftar')</script>";
+        header("location:registration.php?error=username");
         return false;
     }
     
-    // mengecek kesesuaian passwor dengan password konfirmasi
+    // mengecek kesesuaian password dengan password konfirmasi
     if($password !== $conf_password) {
-        echo "<script>alert('Konfirmasi Password Tidak Sesuai')</script>";
+        header("location:registration.php?error=password");
         return false;
     }
 
